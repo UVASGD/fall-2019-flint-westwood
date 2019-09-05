@@ -51,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -59,6 +59,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -128,13 +129,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4165441051095651264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6ad7e90ae9471641968a55b70fb9cf5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c5e0aee823384460b426cb66bd2d317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 17.6
   rb: {fileID: 4312991265556383087}
   collisionMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  maxBounces: 5
-  bounceCount: 0
+    m_Bits: 0
+  maxBounces: 4
+  bounceCount: 8
