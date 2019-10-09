@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     void ProcessInputs() 
     {
-        movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        movementDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f,1.0f);
         movementDirection.Normalize();
 
