@@ -37,7 +37,6 @@ public class Player : MonoBehaviour, IDamageable
 
     private void ChangeState(PlayerState newState)
     {
-        Debug.Log("State Changed to: " + newState);
         PlayerStateChangeEvent?.Invoke(newState);
     }
 
@@ -94,7 +93,7 @@ public class Player : MonoBehaviour, IDamageable
         GameObject bulletClone = Instantiate(bullet, transform.GetChild(0).position, Quaternion.Euler(0f, 0f, -90f));
         bulletClone.GetComponent<Rigidbody2D>().velocity = new Vector3(75f * Time.deltaTime, 0f, 0f);
     }
-
+`
     
     public void TakeDamage(int health)
     {
