@@ -645,7 +645,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementDirection: {x: 0, y: 0}
   movementSpeed: 0
-  MOVEMENT_BASE_SPEED: 2
+  WALK_BASE_SPEED: 0.5
+  SPRINT_BASE_SPEED: 1.5
+  TAP_TIME: 0.5
   rb: {fileID: 1100201206}
 --- !u!50 &1100201206
 Rigidbody2D:
