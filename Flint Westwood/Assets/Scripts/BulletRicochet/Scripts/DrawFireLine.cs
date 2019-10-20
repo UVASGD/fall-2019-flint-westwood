@@ -15,6 +15,7 @@ public class DrawFireLine : MonoBehaviour
     private List<GameObject> dashPool;
     private Vector3[] bouncePositions;
     private float moveTimer;
+    public RaycastHit2D rayHit;
 
     private void Start()
     {
@@ -50,7 +51,7 @@ public class DrawFireLine : MonoBehaviour
 
             Ray2D dashRay = new Ray2D(rayStartPoint, rayDirection);
 
-            RaycastHit2D rayHit = Physics2D.Raycast(rayStartPoint, rayDirection, lineMaxDistance, lineHitLayer);
+            rayHit = Physics2D.Raycast(rayStartPoint, rayDirection, lineMaxDistance, lineHitLayer);
 
             float distanceToEnd = Vector3.Distance(rayStartPoint, rayHit.point);
 

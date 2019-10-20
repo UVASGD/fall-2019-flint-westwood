@@ -26,14 +26,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        
+        ProcessInputs();
     }
     
     void FixedUpdate()
     {
-        ProcessInputs();
+        
         HandleMovement();
     }
+    
 
     void ProcessInputs() 
     {
