@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\Hyden\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Hyden\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Flint Westwood.950105387.00" t="ExcludeRecursive" />
+    <e p="D:\DevDesign\Unity\sgd\fall-2019-flint-westwood\Flint Westwood" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -13,8 +15,20 @@
             <e p="AnimatorManager.cs" t="Include" />
           </e>
           <e p="Bullet.cs" t="Include" />
+          <e p="BulletRicochet" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Breakable.cs" t="Include" />
+              <e p="BulletHit.cs" t="Include" />
+              <e p="BulletMovementPreCalc.cs" t="Include" />
+              <e p="DrawFireLine.cs" t="Include" />
+              <e p="EnemyMovement.cs" t="Include" />
+              <e p="PlayerAttack.cs" t="Include" />
+              <e p="SimplePlayerMovement.cs" t="Include" />
+            </e>
+          </e>
           <e p="Enemy.cs" t="Include" />
           <e p="HealthDamage" t="Include">
+            <e p="Box.cs" t="Include" />
             <e p="DamageDealer.cs" t="Include" />
             <e p="Interfaces" t="Include">
               <e p="IBreakable.cs" t="Include" />
@@ -24,8 +38,8 @@
           </e>
           <e p="Player" t="Include">
             <e p="Player.cs" t="Include" />
-            <e p="PlayerMovement.cs" t="Include" />
           </e>
+          <e p="PlayerMovement.cs" t="Include" />
           <e p="Projectiles" t="Include">
             <e p="Bullet.cs" t="Include" />
           </e>
@@ -97,9 +111,7 @@
       <e p="Flint Westwood.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_Flint Westwood.-530515247.00" t="ExcludeRecursive" />
   </component>
 </project>
