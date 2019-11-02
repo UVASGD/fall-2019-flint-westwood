@@ -50,7 +50,7 @@ public class bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision otherObj)
     {
-        if (otherObj.gameObject.tag == "Wall")
+        if (otherObj.gameObject.CompareTag("Wall"))
         {
             bounceCount += 1;
             Destroy(gameObject);

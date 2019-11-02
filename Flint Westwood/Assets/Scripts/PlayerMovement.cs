@@ -2,47 +2,70 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Character stats:")]
-    public Vector2 movementDirection;
-    public float movementSpeed;
+    [SerializeField] private Vector2 movementDirection;
+    [SerializeField] private float movementSpeed;
 
     [Space]
     [Header("Character attributes:")]
-    public float MOVEMENT_BASE_SPEED = 1.0f;
+    [SerializeField] private float WALK_BASE_SPEED = 1.0f;
+    [SerializeField] private float SPRINT_BASE_SPEED = 1.5f;
     
-    [Space]
-    [Header( "References")]
-    Animator playerAnim;
+    private Rigidbody2D rb;
+    private Vector3 playerMovement;
+    
+    [SerializeField] bool isSprinting = false;   //True if character currently sprinting
 
-    public Rigidbody2D rb;
-    // Start is called before the first frame update
     void Start()
     {
-
-
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         ProcessInputs();
-        Move();
     }
+    
+    void FixedUpdate()
+    {
+        
+        HandleMovement();
+    }
+    
 
     void ProcessInputs() 
     {
-        movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f,1.0f);
-        movementDirection.Normalize();
-
+        playerMovement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0f);
+        playerMovement = playerMovement.normalized;
+        if (Input.GetButton("Sprint"))
+        {
+            this.isSprinting = true;
+            Debug.Log("Sprinting!");
+        }
+        else
+        {
+            this.isSprinting = false;
+        }
+        
     }
-
-    void Move()
+    
+    void HandleMovement()
     {
-        rb = GetComponent<Rigidbody2D> ();
-         rb.velocity = movementDirection * movementSpeed * MOVEMENT_BASE_SPEED;
+        Vector3 playerVelocity;
+
+        if (this.isSprinting)
+        {
+            playerVelocity = Time.deltaTime * movementSpeed * SPRINT_BASE_SPEED * playerMovement;
+        }
+        else
+        {
+            playerVelocity = Time.deltaTime * movementSpeed * WALK_BASE_SPEED * playerMovement;
+
+        }
+
+        rb.MovePosition(transform.position + playerVelocity);
     }
 }
