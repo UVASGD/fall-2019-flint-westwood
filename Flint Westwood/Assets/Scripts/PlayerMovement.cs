@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public float TAP_TIME = 0.5f;
 
     [Space]
-    [Header( "References")]
+    [Header("References")]
     Animator playerAnim;
 
     public Rigidbody2D rb;
@@ -31,16 +31,20 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
-        
+    	
     }
 
     // Update is called once per frame
     void Update()
     {
+    
+    }
+    
+    void FixedUpdate()
+    {
         ProcessInputs();
-        if (isSprinting)
+    
+    	if (isSprinting)
         {
             Run();
         }
